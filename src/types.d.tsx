@@ -9,10 +9,12 @@ export interface IProduct {
         count: number;
     };
 }
-
+export interface ICartItem extends IProduct {
+    quantity: number;
+}
 export interface IReduxInitialState {
     products?: IProduct[];
-    cartItems?: IProduct[];
+    cartItems?: ICartItem[];
     isCartOpen: boolean;
     loading: boolean;
     error: boolean;

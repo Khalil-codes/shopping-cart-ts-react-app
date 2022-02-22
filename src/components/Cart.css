@@ -6,4 +6,15 @@
     width: 40%;
     z-index: 10;
     height: calc(100vh - 70px);
+    padding: 20px 15px;
+    overflow: auto;
+}
+.cart-container::-webkit-scrollbar {
+    display: none;
+}
+
+.cart-container .cart-title,
+.cart-container .cart-total {
+    font-weight: bold;
+    font-size: 1.4rem;
 }

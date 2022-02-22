@@ -9,6 +9,7 @@ const ProductList = (props: Props) => {
     const { loading, products, error } = useCart();
     if (loading) return <div className="loading-container">Loading...</div>;
     if (error) return <div className="error-container">Error Occurred</div>;
+    console.log(products);
     return (
         <div className="products-container">
             {products?.map((product) => (

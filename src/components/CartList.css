@@ -1,0 +1,14 @@
+.cart-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+.cart-list-container :nth-last-child(1) {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding: 0;
+}
