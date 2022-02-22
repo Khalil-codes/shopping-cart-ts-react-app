@@ -1,6 +1,6 @@
 .product-container {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     width: 32%;
@@ -18,7 +18,7 @@
 @media (max-width: 600px) {
     .product-container {
         display: block;
-        height: fit-content;
+        height: min-content;
         width: 100%;
     }
 }

@@ -2,9 +2,8 @@ import React from "react";
 import { useCart } from "../redux/cartSlice";
 import CartItem from "./CartItem";
 import "./CartList.css";
-type Props = {};
 
-const CartList = (props: Props) => {
+const CartList = () => {
     const { cartItems } = useCart();
     return (
         <div className="cart-list-container">

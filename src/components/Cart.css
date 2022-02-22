@@ -9,6 +9,21 @@
     padding: 20px 15px;
     overflow: auto;
 }
+@media (max-width: 1100px) {
+    .cart-container {
+        width: 50%;
+    }
+}
+@media (max-width: 800px) {
+    .cart-container {
+        width: 70%;
+    }
+}
+@media (max-width: 525px) {
+    .cart-container {
+        width: 90%;
+    }
+}
 .cart-container::-webkit-scrollbar {
     display: none;
 }
