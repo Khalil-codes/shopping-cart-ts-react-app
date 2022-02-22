@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.css";
+import Cart from "./components/Cart";
+import Header from "./components/Header";
+import ProductList from "./components/ProductList";
+import { getProducts, toggleCartVisibility, useCart } from "./redux/cartSlice";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useDispatch();
+    const { isCartOpen } = useCart();
+    const handleCartVisibility = () => {
+        dispatch(toggleCartVisibility());
+    };
+    useEffect(() => {
+        const fetchProducts = () => {
+            dispatch(getProducts());
+        };
+        fetchProducts();
+    }, [dispatch]);
+    return (
+        <>
+            <Header />
+            <div className="main-container">
+                <ProductList />
+            </div>
+            {isCartOpen && <Cart />}
+            {isCartOpen && (
+                <div className="backdrop" onClick={handleCartVisibility}></div>
+            )}
+        </>
+    );
 }
 
 export default App;
