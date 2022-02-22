@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with App
+
+Built an add-to-cart-type-app. Used redux to maintain global state for cartItems and products. Fetched products list using redux thunk and declared the appropriate interfaces for cartItem as well as product . User can also increment or decrement product quantity that affects the itemsCount as well as itemsTotal.
 
 ## Available Scripts
 
