@@ -4,8 +4,8 @@ import "./Cart.css";
 import CartList from "./CartList";
 
 const Cart = () => {
-    const cartCount = useCartItemsCount();
-    const cartTotal = useCartItemsTotal();
+    const cartCount: number | undefined = useCartItemsCount();
+    const cartTotal: number | undefined = useCartItemsTotal();
     return (
         <div className="cart-container">
             <div className="cart-title">
@@ -13,7 +13,7 @@ const Cart = () => {
             </div>
             <CartList />
             <div className="cart-total">
-                Total: {cartTotal ? `$ ${cartTotal}` : "0"}
+                Total: {cartTotal ? `$ ${cartTotal.toFixed(2)}` : "$ 0"}
             </div>
         </div>
     );

@@ -12,3 +12,7 @@
     margin-bottom: 0;
     padding: 0;
 }
+.empty-msg {
+    font-size: 1.5rem;
+    color: #183153;
+}
